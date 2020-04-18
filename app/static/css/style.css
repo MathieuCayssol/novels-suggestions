@@ -1,0 +1,115 @@
+body {
+    background: url('../img/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p,
+h1,
+label,
+input {
+    font-family: 'Varela Round', sans-serif;
+}
+
+#books_icon {
+    display: inline-block;
+    margin-top: -20px;
+}
+
+h1 {
+    display: inline-block;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+#description_books {
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+}
+
+.colmd10base {
+    text-align: center;
+    background: white;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 25px 25px 25px 25px;
+    border: 1px #303F9F solid;
+}
+
+#button-search {
+    padding: 10px;
+}
+
+#span_optional {
+    color: gray;
+    font-style: italic;
+}
+
+form {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-group {
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+/* Display the result */
+
+.colmd10display {
+    text-align: center;
+    background: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 30px 30px 5px 30px;
+    border: 1px #303F9F solid;
+}
+
+#out_title {
+    font-style: italic;
+}
+
+.div_result {
+    text-align: left;
+}
+
+.blurb_display p {
+    padding-top: 10px;
+    font-size: 15px;
+    text-align: justify;
+    color: #37474F;
+}
+
+.blurb_display {
+    border-top: 1px solid black;
+}
+
+textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgb(190, 190, 190);
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(190, 190, 190);
+}
+
+textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgb(190, 190, 190);
+}
+
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(190, 190, 190);
+}

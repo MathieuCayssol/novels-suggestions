@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <link href="{{ url_for('static', filename='css/pace.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10 colmd10base">
+                    <div class="main-form">
+                        <img id="books_icon" src="{{ url_for('static', filename='img/book.svg') }}" width="55px" alt="">
+                        <h1 style="font-size: 3em;">Novels suggestions</h1>
+                        <p id="description_books">Novels suggestions predict the most relevant books related with the words and context. Database is composed of 47,000 novels with the title and abstract. This tool is based on Deep Learning and NLP (Natural Language Processing).
+                            Click <a href="#">here</a> to know more.</p>
+                        <form method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Your text (Below you can see an example of the abstract of the movie Terminator)</label>
+                                <textarea class="form-control" id="abstract_input" name="abstract_input" rows="4" cols="40" placeholder="A cyborg is sent from the future on a deadly mission. He has to kill Sarah Connor, a young woman whose life will have a great significance in years to come. Sarah has only one protector - Kyle Reese - also sent from the future. The Terminator uses his exceptional intelligence and strength to find Sarah, but is there any way to stop the seemingly indestructible cyborg ?"
+                                    required></textarea>
+                                <small id="emailHelp" class="form-text text-muted">Keep in mind that context is considered</small>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Key words (separate with comma and no space) <span id="span_optional"> - in development</span></label>
+                                <input type="text" class="form-control" id="keyword_input" name="keyword_input" placeholder="Leave the field blank. ">
+                                <small id="emailHelp" class="form-text text-muted">These keywords will have to appear in the abstract on the books</small>
+                            </div>
+                            <button type="submit" id="button-search" class="btn btn-primary" onclick="Pace.restart()">Search</button>
+                        </form>
+                        <div id="result">
+                        </div>
+                    </div>
+                    <p style="font-size: 10px; text-align: right; color: rgb(170, 170, 170);">Developed by Mathieu Cayssol</p>
+                </div>
+                <div class="col-md-1 "></div>
+
+            </div>
+            <div class="row">
+                {% block result_search %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+</html>

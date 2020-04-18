@@ -1,0 +1,21 @@
+{% extends "/public/index.html" %} {% block result_search %} {% if (area_input!='' and area_input !=' ') %} {% for i in range(0, out_blurb|length) %}
+<div class="col-md-1"></div>
+<div class="col-md-10 colmd10display">
+    <div class="div_result">
+        <div class="title_display">
+            <p>{{ i+1 }}. <span id="out_title">{{ out_title[i] }}</span>, <span id="out_author">{{ out_author[i] }}</span></p>
+        </div>
+        <div class="blurb_display">
+            <p>{{ out_blurb[i] }}</p>
+        </div>
+        <div>
+            <p>Similarity score : {{ score_display[i] }}</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>
+
+{% endfor %} {% else: %}
+
+<p>{{ error_area }}</p>
+{% endif %} {% endblock result_search %}
